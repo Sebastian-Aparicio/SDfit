@@ -1,0 +1,505 @@
+.statistics {
+  height: 85vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.container-statistics {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  gap: 5rem;
+
+  font-family: "Montserrat", sans-serif;
+  ;
+}
+
+.container-statistics span {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
+  height: 10%;
+
+}
+
+.container-statistics span div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+
+}
+
+.select-day-title {
+
+  font-weight: 500;
+  color: #11BF7F;
+
+}
+
+
+.container-statistics h4 {
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 500;
+
+
+}
+
+.container-statistics h4 p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #909292;
+}
+
+
+.custom-date-input {
+  width: 12rem;
+  background-color: #2a2a2a;
+  /* Fondo más destacado */
+  color: white;
+  border: 2px solid #4CAF50;
+  /* Verde más sutil */
+  /* Verde neón para destacar */
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Efectos al pasar el mouse y enfocar */
+.custom-date-input:hover,
+.custom-date-input:focus {
+  background-color: #353535;
+  border-color: #32CD32;
+  box-shadow: 0px 0px 10px rgba(50, 205, 50, 0.5);
+}
+
+
+/* Estilos para el mensaje de "No hay datos" */
+.no-data-message {
+  color: #FF5733;
+  /* Rojo-anaranjado para destacar */
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container-graphs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+
+.container-card-statistics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 columnas */
+  gap: 1rem;
+  /* Espaciado entre las cards */
+  width: 60%;
+  /* Ajuste del ancho para centrar mejor */
+  margin: 0 auto;
+  /* Centrar */
+}
+
+.list-card-statistics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 1rem;
+  width: 14rem;
+  height: 13rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.list-card-statistics:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.list-card-statistics:active {
+  transform: scale(0.95);
+}
+
+.list-card-statistics.selected {
+  border: 2px solid #8884d8;
+  box-shadow: 0px 0px 15px rgba(136, 132, 216, 0.5);
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 1024px) {
+  .container-card-statistics {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 600px) {
+  .container-card-statistics {
+    grid-template-columns: repeat(1, 1fr);
+    /* 1 columna en pantallas pequeñas */
+  }
+}
+
+
+.list-card-statistics h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #909292;
+  text-align: center;
+  margin: 0;
+}
+
+
+.container-list-series {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.list-series {
+  font-size: .9rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2px;
+
+}
+
+
+.serie {
+  border-radius: 4px;
+
+  width: 4rem;
+  text-align: center;
+  background-color: rgba(0, 0, 255, 0.2);
+  /* Azul translúcido */
+  border: 1px solid #4a90e2;
+  /* Azul más vivo */
+
+  border-radius: 5px;
+}
+
+.reps {
+  border-radius: 2px;
+  background-color: #666DF2;
+  width: 7rem;
+
+}
+
+
+.title-graphs {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #909292;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .4rem;
+  text-align: center;
+}
+
+.exercise-graphs {
+  font-size: 1.3rem;
+
+  font-weight: 600;
+  color: #11BF7F;
+
+}
+
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.carousel-btn.left {
+  left: 0;
+  /* Ajusta según necesidad */
+}
+
+.carousel-btn.right {
+  right: 0px;
+  /* Ajusta según necesidad */
+}
+
+
+.selection-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.card-option {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 280px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  border: 2px solid transparent;
+}
+
+.card-option:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border-color: #8884d8;
+}
+
+.card-option.selected {
+  border-color: #8884d8;
+  background-color: #2e2e2e;
+}
+
+
+.back-btn {
+  width: 5rem;
+  background-color: transparent;
+
+  border: 2px solid #909292;
+  ;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  text-align: center;
+}
+
+.back-btn:hover {
+  background-color: #2a2a2a;
+  border-color: #8884d8;
+  ;
+  transform: scale(1.05);
+}
+
+
+
+.exercise-summary-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+}
+
+
+.exercise-summary-card {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+
+}
+
+
+.exercise-summary-card p {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.exercise-summary-card p svg {
+  margin-right: 8px;
+  color: #4CAF50;
+  /* Color del ícono */
+  font-size: 1.2rem;
+  /* Tamaño del ícono */
+}
+
+
+@media screen and (max-width: 767px) {
+
+
+
+
+  .statistics {
+    margin-top: 2rem;
+    padding-bottom: 6rem;
+    
+    height: 100%;
+
+
+
+
+  }
+
+  .container-statistics {
+    width: 100%;
+    justify-content: start;
+  }
+
+
+
+  .goal-card {
+    width: 100%;
+    flex-direction: column;
+    font-size: .8rem;
+    gap: 0.5rem;
+  }
+
+  .container-nutrition-stats {
+    flex-direction: column;
+    margin-bottom: 10rem ;
+    gap: 2rem;
+  }
+
+  .container-graphs-nutrition {
+    width: 100%;
+    height: 40%;
+    gap: 1rem;
+    padding-top: 0;
+  }
+
+  .daily-summary-text {
+    width: 100%;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+
+  }
+
+  .daily-summary-text p {
+
+    width: 30%;
+    display: flex;
+    font-size: .5rem;
+  }
+
+
+  .container-macro-bars{
+    width: 95%;
+    height: 10%;
+    
+  }
+
+
+  .macro-bar span{
+    font-size: .5rem;
+  }
+
+
+  .container-pie-chart{
+    display: none;
+  }
+
+  .container-resumen{
+    width: 100%;
+  }
+
+  .exercise-summary-card{
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+
+  }
+
+  .exercise-summary-card p{
+    font-size: .6rem;
+    width: 45%;
+  }
+
+  .container-card-statistics{
+    
+  }
+
+  .list-card-statistics{
+    width: 100;
+    height: 8rem;
+  }
+
+  .list-card-statistics h3{
+    font-size: .8rem
+  }
+
+  .list-series{
+    font-size: .3rem;
+  }
+}

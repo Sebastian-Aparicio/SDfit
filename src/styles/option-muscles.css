@@ -1,0 +1,405 @@
+.container-buttons{
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+   
+}
+
+.muscle-selection{
+ width: 100%; 
+ height: 100%;  
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+
+}
+.container-muscle-selection{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  gap: 100px;
+ 
+}
+
+
+.body-icon {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  height: 100%;
+
+  border-radius: 25px; 
+}
+
+.container-body-icon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  width: 70%;
+ 
+  max-height: 85vh; 
+  object-fit: contain;
+
+}
+
+.render-select-musclet {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea los elementos a la izquierda */
+  gap: 5px; /* Espaciado entre palabras */
+}
+
+
+
+.silhouette-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.muscle-button {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #D5F760;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 1.5s infinite alternate;
+}
+
+.muscle-button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.muscle-button.selected {
+  background-color: #1d90f5;
+  border-color: white;
+}
+
+/* Tooltip */
+.muscle-button::after {
+  content: attr(data-muscle);
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.muscle-button:hover::after {
+  opacity: 1;
+}
+
+/* Efecto de latido */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+
+.container-musclet-tile {
+  padding-top: 7px;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3rem;
+  color:#fff;
+  font-family: "Montserrat", sans-serif; 
+  text-transform: uppercase;
+
+   
+}
+
+
+
+
+.musclet-title{
+ 
+  color: #F0F0F0;
+  height: 30%;
+  border-radius: 25px;
+  
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.render-select-musclet  {
+  height: 55%;
+  background-color: #4B68BF;
+  border-radius: 25px;
+}
+.render-select-musclet p{
+  height: 100%;
+  font-size: 1rem;
+  font-weight: 200;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: #3131d2;
+  font-family: "Montserrat", sans-serif; 
+ 
+}
+
+.img-title{
+  color: white;
+  font-size: 300px
+}
+
+
+.selected-muscles {
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 500px;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+.selected-muscle:hover {
+  background-color: #155a8a;
+  transform: scale(1.1);
+}
+.selected-muscle {
+  background: linear-gradient(145deg, #1e3a8a, #2563eb);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: .8rem;
+  font-family: "Montserrat", sans-serif; 
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.selected-muscle:hover {
+  background: linear-gradient(145deg, #2563eb, #1e40af);
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px rgba(37, 99, 235, 0.7);
+}
+
+
+
+S
+
+.muscle-image {
+  transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.muscle-selected {
+  filter: drop-shadow(0px 0px 10px rgba(255, 215, 0, 0.7)); /* Brillo dorado */
+  opacity: 1;
+}
+
+.muscle-hover {
+  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5)); /* Resplandor leve */
+  transition: filter 0.2s ease-in-out;
+}
+
+
+.button-render {
+  margin-top: 1rem;
+  font-size: .8rem;
+  padding: 1em 2.7em;
+  font-family: "Montserrat", sans-serif; 
+  background-color: #2564eb00;;
+  border: 1px solid #fff;
+  color: white;
+  
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.6em;
+  cursor: pointer;
+}
+
+.gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 0.6em;
+  margin-top: -0.25em;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.3)
+  );
+}
+
+.label {
+  position: relative;
+  top: -1px;
+  
+}
+
+.transition {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 500ms;
+  background-color: #3b82f6;
+  border-radius: 9999px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button:hover .transition {
+  width: 14em;
+  height: 14em;
+
+  
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+
+
+
+.workout-view{
+  height: 85vh;
+}
+
+
+
+
+.go-back-btn1 {
+
+  
+   
+ border: 2px solid #909292;; 
+ background-color: transparent;
+ 
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+ 
+  text-align: center;
+  
+}
+
+.go-back-btn1:hover{
+
+ border: 2px solid #155a8a;
+
+  transform: scale(1.05);
+}
+
+
+.title-none{
+   color: red;
+                textAlign: center;
+                marginTop: 10px;
+                fontWeight: bold;
+}
+
+@media screen and (max-width: 767px){
+  .container-muscle-selection{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .img{
+    position:absolute;
+    width: 100%;
+  }
+
+ 
+  .container-musclet-tile{
+    position: absolute;
+    font-size: 1rem;
+    top: 0;
+    width: 100%;
+   
+  }
+
+
+  .musclet-title{
+    position: absolute;
+    top: 1.8rem;
+  }
+
+  .selected-muscles {
+    position: absolute;
+    top: 32rem;
+    gap: .5rem;
+  }
+
+  .selected-muscle{
+    font-size: .4rem;
+  }
+
+  .go-back-btn1{
+    position: absolute;
+    top: 3rem;
+    left: .4rem;
+    font-size: .1rem;
+    height: 3rem;
+    border: none;
+
+  }
+
+  .button-render{
+    
+     position: absolute;
+     top: 3rem;
+     right: 0;
+      font-size: .5rem;
+     padding: .5em 2em;
+     border: none;
+     
+
+  }
+
+
+  .title-none{
+  font-size:.6rem
+}
+}

@@ -1,0 +1,65 @@
+
+.container-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 12vh;
+}
+
+
+.header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  padding: 1rem;
+   /* Difuminado tipo glass */
+}
+
+.container-list {
+  width: 100%;
+  display: flex;
+  justify-content:end;
+  gap: 10rem;
+  
+  align-items: center;
+  list-style: none;
+}
+
+.container-list li {
+  margin-right: 1rem;
+  font-size: 1rem;
+  
+}
+
+
+
+.container-list li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+
+.container-list a:hover {
+  color:rgba(186, 183, 178, 0.864);}
+
+  
+  .container-list li a {
+    position: relative;
+  }
+  
+  
+  
+  .container-list li a:hover::after {
+    transform: scaleX(1);
+  }
+
+
+ @media screen and (max-width: 767px) {
+  .container-header {
+    display: none;
+  }
+}

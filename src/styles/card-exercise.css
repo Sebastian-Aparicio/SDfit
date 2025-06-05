@@ -1,0 +1,430 @@
+.container-exercise {
+   height: 60%;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   gap: 2rem;
+}
+
+.container-exercise h2{
+   font-size: 1.5rem;
+   font-family: "Montserrat", sans-serif; 
+}
+
+
+.container-card{
+    height: 100%; 
+    display: grid;
+    justify-items: center;
+    align-items: start; /* Los elementos se alinean arriba */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Se acomodan en columnas */
+    gap: 2rem;
+    padding: 1rem; 
+    border-radius: 25px;
+    overflow-y: auto; /* Permite hacer scroll vertical */
+    overflow-x: hidden; /* Evita que el contenido se desborde horizontalmente */
+    color: #000;
+   
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 10rem;
+    height: 15rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    background-color:beige;
+    color: #000000;
+    transition: all 0.3s;
+    gap: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes selectAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+}
+
+.card.selected {
+    background-color: #2563eb; /* Azul fuerte */
+    color: white;
+    border: 3px solid #1d4ed8;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.8);
+    transform: scale(1.05);
+    animation: selectAnimation 0.3s ease-in-out;;
+}
+
+
+
+.container-card::-webkit-scrollbar {
+    width: 0px; /* Oculta completamente */
+    height: 0px;
+}
+
+/* Cuando el usuario hace hover, la barra aparece */
+.container-card:hover::-webkit-scrollbar {
+    width: 6px; /* Ajusta el ancho al hacer hover */
+    height: 6px;
+}
+
+/* Fondo de la barra (track) */
+.container-card::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Estilo del thumb (barra de desplazamiento) */
+.container-card:hover::-webkit-scrollbar-thumb {
+    background: rgba(37, 99, 235, 0.7);
+    border-radius: 10px;
+}
+
+/* Para Firefox */
+.container-card {
+    scrollbar-width: none; /* Oculta en Firefox */
+}
+
+.container-card:hover {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(37, 99, 235, 0.7) transparent;
+}
+
+
+
+
+
+.img-card{
+   width: 100%;
+    height: 10rem;
+    background-color: #40404050;
+    border-radius: 10px;
+}
+  
+.info-card{
+    display:flex ;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif; 
+    gap: 0.4rem;
+    font-size: 0.8rem;
+}
+
+
+
+
+.button-card{
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  
+    padding: 0.5rem;
+    width: 100%;
+    background-image: var(--bg-linear);
+  
+    font-size: .6rem;
+    font-family: "Montserrat", sans-serif; 
+    color: #ffffff;
+    text-wrap: nowrap;
+    background-color: #2563eb;
+    border: 2px solid #1e40af;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 0.25rem 1px var(--light);
+}
+
+.button-card:hover{
+    background-color: #3b82f6;
+}
+
+
+.button-card-seleccionado{
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  
+    padding: 0.5rem;
+    width: 100%;
+    background-image: var(--bg-linear);
+  
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-wrap: nowrap;
+    background-color: #16a34a;
+    color: #ffffff;
+    border: 2px solid #15803d;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 0.25rem 1px var(--light);
+}
+
+.button-card-seleccionado:hover{
+    background-color: #22c55e;
+}
+
+.card-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:85vh;
+    width: 90%;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.container-list-exercise{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 30%;
+    gap: 1rem;
+    
+}
+
+.title-container-list{
+   margin-top: 2rem;
+}
+
+
+
+.list-exercise{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #40404023;
+    height: 70%;
+    width: 100%;
+    border-radius: 25px;
+    gap: 4rem;
+
+}
+
+
+
+.list-exercise .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    width: 10rem;
+    height: 8rem;
+    text-align: center;
+    position: relative;
+}
+
+
+.list-exercise .card h3{
+    font-size: .9rem;
+    font-family: "Montserrat", sans-serif; 
+}
+
+
+@keyframes popUp {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.list-exercise .card.ordered {
+    background-color: #2563eb;
+    color: white;
+    border: 3px solid #1d4ed8;
+    transform: scale(1.05);
+    animation: popUp 0.3s ease-in-out;
+}
+/* Indicador de orden */
+.list-exercise .order-indicator {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+/* Botón de eliminar solo dentro de la lista de ejercicios */
+.list-exercise .card button {
+    background-color: #dc2626;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.list-exercise .card button:hover {
+    background-color: #b91c1c;
+}
+
+.text-order-card{
+  
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+
+
+.container-final-workout-view{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.final-workout-view{
+    
+    height: 100%;
+    width: 90%;
+    display: flex;
+ 
+    justify-content: center;
+    align-items: center;
+  
+    
+}
+
+@media screen and (max-width: 767px){
+      
+
+
+
+   
+    .container-exercise {
+        
+        gap:.2rem;
+        height:60%;
+    }
+
+    .container-exercise h2{
+        margin-top:.8rem;
+        font-size:1rem;
+        font-weight:200;
+    }
+    .container-card{
+        margin-top: 2.5rem;
+        display:flex;
+        gap:.6rem;
+        flex-wrap: wrap;
+    }
+
+    .card{
+       
+        width:6rem;
+        height:7rem;
+        gap:.2rem;
+        padding:.3rem;
+        
+    }
+    
+
+    .img-card{
+        display:none;
+    } 
+
+    .info-card{
+      font-size:.6rem;
+    }
+    
+    .button-card{
+        width:4rem;
+        height:1rem;
+        font-size:.3rem;
+    }
+
+    .button-card-seleccionado{
+         width:4rem;
+        height:1rem;
+        font-size:.3rem;
+    }
+
+    .container-list-exercise{
+        height:70%;
+    }
+    .title-container-list{
+        font-size:.8rem;
+        font-weight:200;
+    }
+
+    .list-exercise{
+        height:100%;
+         display:flex;
+        gap:.7rem;
+        flex-wrap: wrap;
+    }
+
+
+    .list-exercise .card{
+         width:4.4rem;
+        height:4rem;
+        padding: .2rem;
+    }
+
+    .list-exercise .card h3{
+        font-size:.5rem
+    }
+
+    .list-exercise .card button{
+        width:3rem;
+        height:1rem;
+        font-size:.4rem;
+        padding: 0.5rem .5rem;
+    }
+
+
+    .list-exercise .order-indicator{
+        position: absolute;
+        font-size:.5rem;
+        top: -9px;
+        right: -14px;
+    }
+
+
+    .go-work{
+        position:absolute;
+        right:-16px;
+        background-color:red;
+    }
+
+}
+

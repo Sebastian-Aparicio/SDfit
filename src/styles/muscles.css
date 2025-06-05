@@ -1,0 +1,31 @@
+.muscle-container {
+    position: absolute; /* Para que se superponga a la silueta */
+    cursor: pointer;
+  }
+  
+  
+  
+  .muscle-image.selected {
+    opacity: 0.5; /* Hace que se vea más opaco cuando se selecciona */
+  }
+  
+  .tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  
+  .muscle-container:hover .tooltip {
+    visibility: visible;
+    
+  }
+
+ 

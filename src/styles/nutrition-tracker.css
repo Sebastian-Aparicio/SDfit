@@ -1,0 +1,448 @@
+.nutrition-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+  }
+  
+
+.date-picker-label{
+  display: flex;
+  justify-content: center;
+}
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .add-meal-button {
+    padding: 10px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .add-meal-button:hover {
+    background: #1e40af;
+  }
+  
+  .meal-card {
+    background: #1e1e1e;
+    border: 1px solid #ffffff30;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  .food-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .food-form input {
+    flex: 1 1 120px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ffffff30;
+    background-color: #2e2e2e;
+    color: white;
+  }
+  
+  .food-form button {
+    background-color: #10b981;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .food-form button:hover {
+    background-color: #059669;
+  }
+  
+  .food-list {
+    margin-top: 1rem;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .food-list li {
+    background-color: #2a2a2a;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+  }
+  
+  .meal-calories {
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
+  .totals-summary {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #111827;
+    border-radius: 10px;
+    text-align: center;
+    ;
+  }
+
+
+
+  .toast {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-weight: bold;
+    z-index: 9999;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeOut 3s forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+
+  .date-picker-label label{
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+   gap: 2rem; 
+  }
+ 
+
+  .nutrition-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5rem;
+  }
+
+  .date-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .date-header h2{
+    font-weight: 100;
+  }
+
+
+  .date-header button{
+    background-color: #e53931;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.date-header button:hover {
+    background-color: #c62828;
+}
+
+
+.save-button {
+    background-color: #10b981;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .save-button:hover {
+    background-color: #059669;
+  }
+
+
+
+  .date-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .date-header h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  .date-header button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .date-header button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Sección de objetivos */
+  .goals-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e69;
+    padding: 2rem;
+    border-radius: 16px;
+   
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  
+  .goals-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+  }
+  
+  /* Vista de objetivos guardados */
+  .goals-display p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    color: #f1f1f1;
+  }
+  
+  /* Inputs */
+  .goals-section input {
+    width: 45%;
+    padding: 0.6rem;
+    margin: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #2c2c2c;
+    color: #fff;
+  }
+  
+  .goals-section input:focus {
+    outline: none;
+    border-color: #4aa3ff;
+    box-shadow: 0 0 5px #4aa3ff;
+  }
+  
+  /* Botón de guardar */
+  .save-button {
+    margin-top: 1rem;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-button:hover {
+    background-color: #1e874b;
+  }
+
+
+  .nutrition-container-meals{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+
+  .goals-display{
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .objectives-summary{
+    display: flex;
+    width: 40%;
+   
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+
+  .comparison-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+
+    
+  }
+
+
+  .comparison-container p {
+    display: flex;
+    gap: .5rem;
+  }
+  
+.totals-summary{
+  display: flex;
+    width: 40%;
+   
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+.date-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.date-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.date-header button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.date-header button:hover {
+  background-color: #d62828;
+}
+
+.goal-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.goal-inputs input {
+  width: 250px;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.save-button {
+
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-button:hover {
+  background-color: #21867a;
+}
+
+.mobile-only {
+  
+  display: none;
+}
+.desktop-only {
+   display: inline;
+}
+
+@media screen and (max-width: 767px){
+
+
+  .nutrition-container{
+    gap: 1.5rem;
+  }
+  .date-header h2  {
+    font-size: 1.2rem;
+  }
+  .mobile-only {
+  display: inline;
+
+}
+.desktop-only {
+  display: none;
+}
+
+  .goal-inputs{
+    height: 20%;
+  }
+
+
+
+.nutrition-container-meals{
+  padding-bottom: 5rem;
+}
+
+
+.comparison-container{
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  font-size: .8rem;
+}
+
+.edit-objects{
+  position: absolute;
+  right: 0rem;
+  top: 14.6rem;
+  width: 10%;
+  height: 5%;
+  font-size: .8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.add-meal-button{
+  margin-top: 1.5rem;
+}
+}

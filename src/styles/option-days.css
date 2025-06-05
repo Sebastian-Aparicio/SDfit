@@ -1,0 +1,382 @@
+
+
+  
+
+.days {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    gap: 100px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.container-days-title {
+    
+    width: 60%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    
+    text-align: center;
+
+}
+
+.title-one {
+    font-size: 5rem; /* Reducimos un poco para mejor adaptación */
+    color: #3B82F6;
+    font-family: "Montserrat", sans-serif; /* Cambiamos a una fuente más moderna */
+    font-weight: 700; /* Un poco más grueso para mayor impacto */
+    font-style: normal;
+    text-transform: uppercase; /* Hace que todo esté en mayúsculas para más presencia */
+    letter-spacing: 3px; /* Espaciado entre letras para mejor legibilidad */
+    text-shadow: 0px 0px 15px rgba(59, 130, 246, 0.7); 
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.title-two {
+    font-size: 1.5rem;
+    font-weight: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.8s ease-in-out 0.3s forwards;
+
+
+}
+
+.container-days {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-in-out 0.5s forwards;
+
+}
+
+
+.container-days select {
+    height: 5vh;
+    width: 25vh;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+
+
+/* Cambiar el fondo general del calendario */
+.react-calendar {
+    height: 50%;
+    width: 35%;
+    background-color: #3b82f6;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 50px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.8s ease-in-out 0.6s forwards;
+}
+
+
+
+.react-calendar__month-view__days {
+    height: 40vh;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+/* Personalizar la navegación (mes y botones) */
+
+
+.react-calendar__navigation__label {
+    font-size: 1.5rem;
+
+}
+
+.react-calendar__navigation__label:hover {
+    font-size: 1.5rem;
+    color: black;
+    background-color: #4B68BF !important;
+}
+
+.react-calendar__navigation__prev-button {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+
+
+.react-calendar__navigation__prev-button:hover {
+    background-color: inherit !important;
+    color: #D5F760;
+}
+
+
+.react-calendar__navigation__prev-button:focus {
+    background-color: inherit !important;
+    color: #D5F760;
+}
+
+.react-calendar__navigation__next-button {
+
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+}
+
+.react-calendar__navigation__next-button:hover {
+    background-color: inherit !important;
+    color: #D5F760;
+}
+
+.react-calendar__navigation__next-button:focus{
+    background-color: inherit !important;
+    color: #D5F760;
+}
+
+.react-calendar__navigation__next2-button {
+    display: none;
+}
+
+.react-calendar__navigation__prev2-button {
+    display: none;
+}
+
+/* Al pasar el mouse por encima de la navegación */
+
+
+
+
+/* Personalizar los días (tiles) */
+.react-calendar__tile {
+    background: #fff;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+/* Cambiar color de fondo al pasar el mouse sobre un día */
+
+
+/* Día seleccionado */
+
+
+/* Otras personalizaciones: ajustar padding, margin, etc. */
+.react-calendar__month-view__days__day {
+
+    padding: 0.5rem;
+    background-color: #111519;
+    border-radius: 50%;
+    color: #fff;
+}
+
+
+
+
+.react-calendar__tile:enabled:hover {
+    background-color: #47e17f !important;
+    /* Cambia #d9e8ff por el color que prefieras */
+    color: #000 !important;
+    /* Cambia #333 por el color de texto deseado */
+}
+
+
+
+.container-tips{
+    width: 90%;
+    height: 100%;
+}
+
+
+
+.fitness-tips{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
+  padding: 1.5rem;
+  border-radius: 12px;
+ 
+}
+
+
+.container-fitness-tips{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.8s ease-in-out 0.7s forwards;
+
+}
+
+
+
+/* Agregamos la animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tips{
+    display: flex;
+    
+    
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  
+  gap: 50px;
+}
+
+.cards .red {
+  background-color: #f43f5d00;
+  
+}
+
+.cards .blue {
+  background-color: #3b83f600;
+ 
+}
+
+.cards .green {
+  background-color: #22c55e00;
+  
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  width: 400px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+
+
+.cards .card p.second-text {
+  font-size: .7em;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}
+
+.icon-tips{
+    color:#ffffff;
+    font-size: 20px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media screen and (max-width: 767px){
+    .container-days{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+
+    .container-days-title{
+        width: 90%;
+        padding-left: 0px;
+    }
+
+    .react-calendar{
+        width: 90%;
+        height: 50vh;
+    }
+
+
+    .react-calendar{
+        height: 75%;
+
+   
+       
+    }
+
+
+    .title-one{
+        font-size: 1.5rem;
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+
+
+    .title-two{
+        font-size: 1rem;
+        font-weight: 200;
+        width: 100%;
+    }
+
+    .cards{
+        flex-direction: column;
+        gap: .2rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .cards .card {
+        width: 100%;
+        height: 150px;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+        border: 1px solid #ffffff;
+        gap: 1rem;
+    }
+
+    .icon-tips{
+        font-size: 2rem;
+    }
+}
