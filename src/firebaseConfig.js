@@ -4,15 +4,14 @@ import { getFirestore } from "firebase/firestore"; // 👈 Importa Firestore
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDF093Bb4qVQul_Ir8it1Xl1XQjBkOusi8",
-  authDomain: "sdfit-c485e.firebaseapp.com",
-  projectId: "sdfit-c485e",
-  storageBucket: "sdfit-c485e.appspot.com",
-  messagingSenderId: "236543059757",
-  appId: "1:236543059757:web:8f0a801ca92d401b9f55a4",
-  measurementId: "G-JE9GL9GQED",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
-
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);

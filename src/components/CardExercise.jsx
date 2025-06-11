@@ -1,4 +1,4 @@
-import "../styles/Card-exercise.css";
+import "../styles/card-exercise.css";
 import { MdAdd, MdCheck } from "react-icons/md"; // Cambié MdClose por MdCheck
 
 export const CardExercise = ({ exerciseSelect, handleSelectExercise, selectedExercises }) => {
