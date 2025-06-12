@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/Card-exercise.css';
+import '../styles/card-exercise.css';
 import { WorkoutStatsForm } from './WorkoutStatsForm';
 import { useWorkout } from "../context/WorkoutContext";
 
