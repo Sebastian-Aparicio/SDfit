@@ -1,4 +1,4 @@
-import "../styles/Card-exercise.css";
+import "../styles/card-exercise.css";
 
 export const SelectedExercisesList = ({
   selectedExercises,
